@@ -1,0 +1,33 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/mixins";
+
+.chat {
+  width: inherit;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &__messages {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    overflow: auto;
+
+    &__chatbox {
+      padding: 3rem 0;
+    }
+  }
+
+  &__retry {
+    margin-bottom: 3 * $spacing-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-error;
+    p {
+      margin-bottom: $spacing-large;
+    }
+  }
+}

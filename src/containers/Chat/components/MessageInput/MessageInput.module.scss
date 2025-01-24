@@ -1,0 +1,33 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/mixins";
+
+.message-input {
+  width: 100%;
+  display: flex;
+  margin-bottom: $spacing-large;
+  @include relative;
+  align-items: center;
+
+  &__textarea {
+    flex-grow: 1;
+    resize: none;
+    padding: 0.6rem 5rem 0.6rem 1.2rem;
+    line-height: 1.5;
+    border: 0.1rem solid $color-border-message-input;
+    appearance: none;
+    border-radius: 0.4rem;
+    transition: border-color 0.15s ease-in-out;
+    &:focus {
+      border-color: $color-border-message-input;
+      outline: 0;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    @include absolute(0, 0, 0, null);
+    height: fit-content;
+    margin: auto 1.5rem auto $spacing-small;
+  }
+}

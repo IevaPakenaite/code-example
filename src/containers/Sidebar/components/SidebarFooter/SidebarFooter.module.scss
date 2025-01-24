@@ -1,0 +1,11 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins';
+
+.sidebar-footer {
+  @include sticky(null, null, 0, null);
+  padding: 1.2rem;
+  background-color: $color-bg-sidebar;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

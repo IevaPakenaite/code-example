@@ -1,0 +1,12 @@
+@import '../../../../scss/variables';
+
+.sidebar {
+  background-color: $color-bg-sidebar;
+  color: $color-sidebar;
+  width: 25rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 $spacing-large;
+  overflow-y: auto;
+}

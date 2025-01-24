@@ -1,0 +1,41 @@
+@import '../../scss/variables';
+
+.loader {
+  width: 60px;
+  height: 16px;
+  display: flex;
+  justify-content: space-between;
+  animation: l3-0 1s infinite alternate;
+  align-self: center;
+  justify-self: center;
+
+  &:before,
+  &:after {
+    content: '';
+    width: 16px;
+    background: $color-bg-loader-1;
+    animation: l3-1 0.5s infinite alternate;
+  }
+
+  &:after {
+    background: $color-bg-loader-2;
+    --s: -1;
+  }
+}
+
+@keyframes l3-0 {
+  0%,
+  40% {
+    transform: rotate(0);
+  }
+  80%,
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+@keyframes l3-1 {
+  80%,
+  100% {
+    transform: translate(calc(var(--s, 1) * 14px));
+  }
+}

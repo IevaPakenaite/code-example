@@ -1,0 +1,71 @@
+@import "./branding";
+
+// Typography
+$font-family: "Arial", sans-serif;
+$font-size-body: 1.5rem;
+
+// Layout
+$spacing-base: 0.2rem;
+$spacing-small: $spacing-base * 2;
+$spacing-medium: $spacing-base * 3;
+$spacing-large: $spacing-base * 6;
+
+// base colors
+$color-base-light: #fff;
+$color-base-dark: #000;
+$color-error: #df4b4c;
+
+// Color mapping
+$color-bg-body: lighten($branding-main, 77%);
+
+$color-scrollbar-thumb: darken($color-base-light, 15%);
+$color-scrollbar-track: darken($color-base-light, 5%);
+
+$color-bg-sidebar: $branding-main;
+$color-sidebar: $color-base-light;
+
+$hover-color-bg-sidebar-item: darken($color-base-light, 5%);
+$hover-color-sidebar-item: $branding-main;
+$active-color-bg-sidebar-item: darken($color-base-light, 5%);
+$active-color-sidebar-item: $branding-main;
+
+$color-bg-resizable-sidebar: $color-base-light;
+$color-resizable-sidebar: $color-base-dark;
+$color-border-resizable-sidebar: $branding-main;
+
+$color-bg-notification: $branding-contrast;
+
+$color-login-button: $color-base-light;
+$color-bg-login-button: $branding-main;
+
+$color-info: $branding-main;
+
+$color-border-message-input: darken($color-base-light, 15%);
+
+$color-bg-message-bubble: $color-base-light;
+$color-border-message-bubble-server: $branding-main;
+$color-border-message-bubble-client: $branding-contrast;
+$color-border-message-avatar-server: $branding-main;
+$color-border-message-avatar-client: $branding-contrast;
+
+$color-modal: $color-base-dark;
+$color-bg-modal: $color-base-light;
+$color-bg-modal-button-secondary: darken($color-base-light, 5%);
+$color-bg-modal-button-primary: $branding-contrast;
+
+$color-bg-loader-1: $branding-main;
+$color-bg-loader-2: $branding-contrast;
+
+$color-icon-button: $branding-main;
+$hover-color-bg-icon-button: lighten($branding-main, 77%);
+
+$color-bg-message-loader: $branding-main;
+$color-message-loader: $branding-main;
+
+$color-button-primary: $color-base-light;
+$color-bg-button-primary: $color-base-light;
+
+$color-button-secondary: $branding-contrast;
+$color-bg-button-secondary: $branding-contrast;
+
+$color-avatar: $color-base-light;

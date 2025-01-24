@@ -1,0 +1,74 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: $color-button-primary;
+
+  &__secondary {
+    color: $color-button-secondary;
+  }
+
+  .label {
+    padding-bottom: 0.7rem;
+    letter-spacing: 0.4rem;
+    font-size: 1.4rem;
+    padding-right: 1.5rem;
+    text-transform: uppercase;
+    @include relative();
+
+    &:after {
+      content: "";
+      @include absolute(null, null, 0, 0);
+      width: 100%;
+      transform: scaleX(0);
+      height: 0.2rem;
+      background-color: $color-bg-button-primary;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    &__secondary {
+      &:after {
+        background-color: $color-bg-button-secondary;
+      }
+    }
+  }
+
+  .icon {
+    transform: translateX(-0.8rem) translateY(0.1rem);
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    .icon {
+      transform: translateX(0) translateY(0.1rem);
+    }
+
+    .label:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+
+  &:active {
+    .icon {
+      transform: scale(0.9);
+    }
+
+    .label {
+      font-size: 1.2rem;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:hover .icon {
+      transform: none;
+    }
+  }
+}

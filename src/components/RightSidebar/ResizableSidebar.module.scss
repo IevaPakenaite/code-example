@@ -1,0 +1,51 @@
+@import "../../scss/variables";
+
+.sidebar {
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-width: 150px;
+  max-width: 45vw;
+  border-left: $color-border-resizable-sidebar 1px solid;
+  flex-direction: row;
+  background: $color-bg-resizable-sidebar;
+  z-index: 2;
+  color: $color-resizable-sidebar;
+  display: none;
+
+  &--open {
+    display: flex;
+  }
+
+  &__content {
+    flex: 1;
+    height: 100vh;
+    overflow: auto;
+    padding: 1.2rem;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__title {
+        font-size: 1.7rem;
+        margin: 1rem auto;
+        width: fit-content;
+      }
+    }
+  }
+
+  &__resizer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 6px;
+    justify-self: flex-end;
+    cursor: col-resize;
+    resize: horizontal;
+
+    &:hover {
+      width: 2px;
+      background: darken($color-bg-resizable-sidebar, 10%);
+    }
+  }
+}

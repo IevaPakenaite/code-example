@@ -1,0 +1,12 @@
+.feedback-modal {
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__textarea {
+    resize: none;
+    min-width: 30rem;
+    width: 40vw;
+    margin-top: 2rem;
+  }
+}

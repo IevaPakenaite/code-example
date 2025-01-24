@@ -1,0 +1,13 @@
+@import '../../../../scss/variables';
+
+.sidebar-content {
+  flex-grow: 1;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    padding-left: 2rem;
+  }
+}

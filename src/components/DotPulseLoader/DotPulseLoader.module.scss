@@ -1,0 +1,72 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.dot-pulse {
+  @include relative(null, null, null, -999.9rem);
+  width: 10px;
+  height: 10px;
+  border-radius: 0.5rem;
+  background-color: $color-bg-message-loader;
+  color: $color-message-loader;
+  box-shadow: 999.9rem 0 0 -0.5rem;
+  animation: dot-pulse 1.5s infinite linear;
+  animation-delay: 0.25s;
+}
+.dot-pulse::before,
+.dot-pulse::after {
+  content: '';
+  display: inline-block;
+  @include absolute(0, null, null, null);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  background-color: $color-bg-message-loader;
+  color: $color-message-loader;
+}
+.dot-pulse::before {
+  box-shadow: 998.4rem 0 0 -0.5rem;
+  animation: dot-pulse-before 1.5s infinite linear;
+  animation-delay: 0s;
+}
+.dot-pulse::after {
+  box-shadow: 1001.4rem 0 0 -0.5rem;
+  animation: dot-pulse-after 1.5s infinite linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes dot-pulse-before {
+  0% {
+    box-shadow: 998.4rem 0 0 -0.5rem;
+  }
+  30% {
+    box-shadow: 998.4rem 0 0 0.2rem;
+  }
+  60%,
+  100% {
+    box-shadow: 998.4rem 0 0 -0.5rem;
+  }
+}
+@keyframes dot-pulse {
+  0% {
+    box-shadow: 999.9rem 0 0 -0.5rem;
+  }
+  30% {
+    box-shadow: 999.9rem 0 0 0.2rem;
+  }
+  60%,
+  100% {
+    box-shadow: 999.9rem 0 0 -0.5rem;
+  }
+}
+@keyframes dot-pulse-after {
+  0% {
+    box-shadow: 1001.4rem 0 0 -0.5rem;
+  }
+  30% {
+    box-shadow: 1001.4rem 0 0 0.2rem;
+  }
+  60%,
+  100% {
+    box-shadow: 1001.4rem 0 0 -0.5rem;
+  }
+}
